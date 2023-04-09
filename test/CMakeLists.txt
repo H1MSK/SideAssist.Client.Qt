@@ -1,17 +1,17 @@
 file(GLOB SRCS "./*.cpp")
 
 add_executable(
-  Test_SideAssistQtClient
+  ${PROJECT_NAME}.Test
   ${SRCS}
 )
 target_link_libraries(
-  Test_SideAssistQtClient
-  SideAssistQtClient
+  ${PROJECT_NAME}.Test
+  ${PROJECT_NAME}
   GTest::gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(Test_SideAssistQtClient)
+gtest_discover_tests(${PROJECT_NAME}.Test)
 
 include(FetchContent)
 message("Fetching googletest...")

@@ -1,4 +1,4 @@
-project(echo)
+project(SideAssist.Client.Echo)
 
 file(GLOB PUBLIC_HEADERS include/*)
 file(GLOB SOURCES src/*)
@@ -7,7 +7,7 @@ add_executable(${PROJECT_NAME}
     ${SOURCES}
     ${PUBLIC_HEADERS})
 
-target_link_libraries(${PROJECT_NAME} SideAssistQtClient)
+target_link_libraries(${PROJECT_NAME} SideAssist.Client.Qt.Lib)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
     if (CMAKE_BUILD_TYPE STREQUAL "Debug")

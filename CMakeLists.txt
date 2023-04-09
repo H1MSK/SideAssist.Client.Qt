@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(SideAssistQtClient)
+project(SideAssist.Client.Qt.Lib)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -50,7 +50,7 @@ add_library(${PROJECT_NAME} ${library_build_type}
     ${SOURCES}
     ${PUBLIC_HEADERS})
 target_include_directories(${PROJECT_NAME} PUBLIC include/)
-target_link_libraries(${PROJECT_NAME} qmqtt)
+target_link_libraries(${PROJECT_NAME} PUBLIC qmqtt Qt6::Core Qt6::Network ${ws_libname})
 target_compile_definitions( ${PROJECT_NAME}
     PRIVATE
         QT_BUILD_SIDEASSIST_LIB
