@@ -1,2 +1,3 @@
+add_subdirectory(client_id_tester)
 add_subdirectory(echo)
 add_subdirectory(screenshot_copier)
